@@ -47,9 +47,8 @@ docute.init({
   },
   plugins: [
     docsearch({
-      appId: '442RTGN46F',
-      apiKey: '18dcdc1fddadbf6cc5e514f16d53923d',
-      indexName: 'hexo-sakura',
+      apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+      indexName: 'docsearch',
       tags: ['english', 'zh-Hans', 'zh-Hant', 'ja'],
       url: 'sakura.hojun.cn/docs/'
     }),
