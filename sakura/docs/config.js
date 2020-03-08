@@ -1,58 +1,55 @@
 const langs = [
   { title: '简体中文', path: '/home', matchPath: /^\/(home|plugin|cli|changelog)/ },
-  { title: 'English', path: '/en/', matchPath: /^\/en/ },
-  { title: '繁體中文', path: '/zh-Hant/', matchPath: /^\/zh-Hant/ },
-  { title: '日本語', path: '/ja/', matchPath: /^\/ja/ }
+  { title: 'English', path: '/en/', matchPath: /^\/en/ }
 ]
 
 docute.init({
   landing: 'landing.html',
   debug: true,
+  // announcement(route) {
+  //   const info = { type: 'success' }
+  //   if (/\/zh-.+$/.test(route.path)) {
+  //     info.html = '<a style="margin-right:10px;" class="docute-button docute-button-mini docute-button-success" href="https://github.com/egoist/donate" target="_blank">捐赠!</a> 通过 Patron 或者一次性捐赠支持 Docute 的开发。'
+  //   } else {
+  //     info.html = '<a style="margin-right:10px;" class="docute-button docute-button-mini docute-button-success" href="https://github.com/egoist/donate" target="_blank">Donate!</a> Support Docute development by becoming a patron or one-time donation.'
+  //   }
+  //   return info
+  // },
   repo: 'honjun/hexo-theme-sakura',
   'edit-link': 'https://github.com/hojundoc/hojundoc.github.io/blob/master/sakura/docs/',
   tocVisibleDepth: 3,
   nav: {
     default: [
       {
-        title: 'Home', path: '/home'
+        title: '首页', path: '/home'
       },
       {
-        title: 'Languages', type: 'dropdown', items: langs
-      }
-    ],
-    'zh-Hans': [
-      {
-        title: '首页', path: '/zh-Hans/'
+        title: '贡献', path: '/contributions'
       },
       {
         title: '选择语言', type: 'dropdown', items: langs
       }
     ],
-    'zh-Hant': [
+    'en': [
       {
-        title: '首頁', path: '/zh-Hant/'
+        title: 'Home', path: '/en/'
       },
       {
-        title: '選擇語言', type: 'dropdown', items: langs
-      }
-    ],
-    ja: [
-      {
-        title: 'はじめに', path: '/ja/'
+        title: 'contributions', path: '/en/contributions'
       },
       {
-        title: '言語', type: 'dropdown', items: langs
+        title: 'Languages', type: 'dropdown', items: langs
       }
     ]
   },
   plugins: [
-    docsearch({
-      appId: '',
-      apiKey: '25626fae796133dc1e734c6bcaaeac3c',
-      indexName: 'docsearch',
-      tags: ['english', 'zh-Hans', 'zh-Hant', 'ja'],
-      url: 'sakura.hojun.cn/docs/'
-    }),
+    // docsearch({
+    //   appId: '',
+    //   apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+    //   indexName: 'docsearch',
+    //   tags: ['english', 'zh-Hans'],
+    //   url: 'sakura.hojun.cn/docs/'
+    // }),
     evanyou()
   ]
 })
