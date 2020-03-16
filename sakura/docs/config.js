@@ -27,6 +27,9 @@ docute.init({
         title: '贡献', path: '/contributions'
       },
       {
+        title: 'Sakura站', path: '/demo'
+      },
+      {
         title: '选择语言', type: 'dropdown', items: langs
       }
     ],
@@ -36,6 +39,9 @@ docute.init({
       },
       {
         title: 'contributions', path: '/en/contributions'
+      },
+      {
+        title: 'demo', path: '/demo'
       },
       {
         title: 'Languages', type: 'dropdown', items: langs
@@ -50,6 +56,20 @@ docute.init({
     //   tags: ['english', 'zh-Hans'],
     //   url: 'sakura.hojun.cn/docs/'
     // }),
+    function valine(context) {
+      context.registerComponent('content:end',{
+        template: '<div id="vcomments" style="padding: 50px;"></div>',
+        mounted: function () {
+          new Valine({
+            el: '#vcomments',
+            appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+            appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+            path: window.location.pathname,
+            placeholder: "你是我一生只会遇见一次的惊喜 ..."
+          })
+        }
+      })
+    },
     evanyou()
   ]
 })

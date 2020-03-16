@@ -19,6 +19,20 @@
 <body>
   <!-- don't remove this part -->
   <div id="app"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+  <script>
+    window.onload = function(){
+        var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/docute@3/plugins/docsearch.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docute-evanyou/dist/evanyou.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docute@3/dist/docute.js"></script>
