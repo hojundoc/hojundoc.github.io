@@ -64,7 +64,7 @@ docute.init({
             el: '#vcomments',
             appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
             appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
-            path: window.location.pathname,
+            path: window.location.href,
             placeholder: "你是我一生只会遇见一次的惊喜 ..."
           })
         }
