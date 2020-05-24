@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+html,body {
+    height: 100%;
+    font-family: serif;
+}
+.swiper-slide{
+    transform-origin:50% 200%;
+}
+.swiper-container{
+}
+#certify {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0px;
+}
+
+#certify .swiper-container {
+    padding-bottom: 120px;
+}
+
+#certify .swiper-slide {
+    padding-top: 310px;
+    width: 220px;
+    height: 310px;
+    background: #0000;
+}
+.swiper-slide .content{
+    color: #fff;
+    width: 210px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.content .top{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.top .title {
+    flex:3;
+    font-size: 3em;
+    font-weight: 700;
+}
+.top .day{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top .day .block{
+    flex:3;
+}
+.top .day .day-text{
+    flex:1;
+    transform-origin: 100% 100%;
+    line-height: 1em;
+    font-size: 1em;
+    transform: scale(0.4);
+}
+.content .bottom{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bottom .no{
+    flex: 3;
+    bottom: 0;
+}
+.bottom .no span{
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 4em;
+}
+.bottom .desc{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    text-align: right;
+    line-height: 1.5em;
+    font-size: 0.5em;
+    transform: scale(0.8);
+}
+.doc-active .content {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 140px);
+    width: 280px !important;
+    height: 400px !important;
+    font-size: 20px;
+    z-index: 3;
+}
+
+#certify  .swiper-slide img{
+    height: 0px;
+    display:block;
+}
+
+#certify .swiper-pagination {
+    width: 100%;
+    bottom: 20px;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+    border: 3px solid #fff;
+    background-color: #d5d5d5;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    border: 3px solid #00aadc;
+    background-color: #fff;
+}
+
+#certify .swiper-button-prev {
+    left: -30px;
+    width: 45px;
+    height: 45px;
+    background: url(../images/wm_button_icon.png) no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+}
+
+#certify .swiper-button-prev:hover {
+    background-position: 0 -46px;
+    background-size: 100%
+}
+
+#certify .swiper-button-next {
+    right: -30px;
+    width: 45px;
+    height: 45px;
+    background: url(../images/wm_button_icon.png) no-repeat;
+    background-position: 0 -93px;
+    background-size: 100%;
+}
+
+#certify .swiper-button-next:hover {
+    background-position: 0 -139px;
+    background-size: 100%
+}
